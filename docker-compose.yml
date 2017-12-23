@@ -4,7 +4,7 @@ services:
     container_name: app
     build: .
     ports:
-      - "7000:7000"
+      - "${PORT}:${PORT}"
     links:
       - mongo
   mongo:
@@ -14,4 +14,6 @@ services:
       - /data/mongodb/db:/data/db
     ports:
       - "27017:27017"
+
+
 
